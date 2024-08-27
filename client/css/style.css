@@ -103,6 +103,23 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 100px;
 }
 
+.button--link {
+  padding: 10px 40px;
+  border: 1px solid white;
+  font-size: 18px;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+.button--link:hover {
+  transform: scale(1.1);
+  background-color: aquamarine;
+  color: rgb(25, 25, 25);
+}
+.button--link:active {
+  transform: scale(1);
+  background-color: rgb(101, 204, 170);
+}
+
 /* --------------------------------------- */
 .wrapper {
   color: white;
@@ -120,6 +137,37 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   text-align: center;
   gap: 50px;
+}
+.main .hero .hero__container .hero__vadym {
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .hero .hero__container .hero__vadym .hero__decorone {
+  position: absolute;
+  padding: 100px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  top: 0;
+  left: 20%;
+}
+.main .hero .hero__container .hero__vadym .hero__decortwo {
+  position: absolute;
+  padding: 100px;
+  background-color: #be15be;
+  border-radius: 50%;
+  right: 20%;
+  bottom: 0;
+}
+.main .hero .hero__container .hero__vadym img {
+  position: relative;
+  z-index: 1;
+  width: 35%;
+  border-radius: 10px;
+  height: 300px;
+  object-fit: cover;
 }
 .main .skills .skills__container {
   position: relative;
@@ -148,6 +196,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px;
 }
 .main .skills .skills__container .skills__content .skills__lists {
+  margin-bottom: 50px;
   gap: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -173,6 +222,36 @@ h1, h2, h3, h4, h5, h6 {
 .main .skills .skills__container .skills__content .skills__lists .skills__item .skills__image img {
   width: 100px;
   height: 100px;
+}
+.main .skills .skills__container .skills__content .skills__cv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main .projects .projects__container {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.main .projects .projects__container .projects__decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 300px;
+  background-color: #be15be;
+  z-index: 0;
+  border-radius: 10px;
+}
+.main .projects .projects__container .projects__content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.main .projects .projects__container .projects__content .projects__title {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
