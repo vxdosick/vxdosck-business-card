@@ -71,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 .flex--row {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .flex--column {
   display: flex;
@@ -99,6 +100,47 @@ h1, h2, h3, h4, h5, h6 {
 
     }
 }
+.text--title {
+  font-size: 40px;
+  font-weight: 600;
+}
+.text--subtitle {
+  font-size: 35px;
+  font-weight: 600;
+}
+.text--text {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 120%;
+}
+.text--link {
+  font-size: 15px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: white;
+    top: 0;
+    right: -4px;
+    opacity: 0;
+  }
+  &:hover::after {
+    animation: slash 0.5s steps(1) infinite;
+  }
+  @keyframes slash {
+    0% {
+      opacity: 0;
+    } 
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
 /* --------------------------------------- */
 .wrapper {
     color: white;
@@ -107,10 +149,45 @@ h1, h2, h3, h4, h5, h6 {
     padding: 50px 0px;
     .header__container {
         .header__logo {
-
+          a {
+            img {
+              max-width: 70px;
+              border-radius: 10px;
+            }
+          }
+        }
+        .header__burger {
+          display: none;
         }
         .header__menu ul {
             gap: 50px;
+            align-items: start;
+            button, a {
+              color: white;
+            }
+            .header__skills {
+              button {
+                background-color: unset;
+              }
+            }
+            .header__skillsdropmenu {
+              position: absolute;
+              max-height: 0;
+              overflow: hidden;
+              .header__skillsdecor {
+                margin-bottom: 8px;
+                text-align: center;
+              }
+              .ul {
+                display: flex;
+                flex-direction: column;
+              }
+            }
+            .show {
+              padding-top: 8px;
+              max-height: 50px;
+              overflow: visible;
+            }
         }
     }
 }
@@ -136,6 +213,13 @@ h1, h2, h3, h4, h5, h6 {
                     border-radius: 10px;
                     top: 0;
                     left: 20%;
+                    @media (max-width: 650px) {
+                      left: 5% ;
+                    }
+                    @media (max-width: 450px) {
+                      left: -10%;
+                      padding: 80px;
+                    }
                 }
                 .hero__decortwo {
                     position: absolute;
@@ -144,11 +228,18 @@ h1, h2, h3, h4, h5, h6 {
                     border-radius: 50%;
                     right: 20%;
                     bottom: 0;
+                    @media (max-width: 650px) {
+                      right: 5%;
+                    }
+                    @media (max-width: 450px) {
+                      right: -10%;
+                      padding: 80px;
+                    }
                 }
                 img {
                     position: relative;
                     z-index: 1;
-                    width: 35%;
+                    width: 300px;
                     border-radius: 10px;
                     height: 300px;
                     object-fit: cover;
@@ -255,4 +346,13 @@ h1, h2, h3, h4, h5, h6 {
     .footer__container {
 
     }
+}
+//--------------------------------------------------
+@media (max-width: 900px) {
+  .header__menu {
+    display: none;
+  }
+  .header__burger {
+    display: block !important;
+  }
 }
