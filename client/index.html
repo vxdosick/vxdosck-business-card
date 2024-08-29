@@ -16,7 +16,28 @@
                     </a>
                 </div>
                 <div class="header__burger">
-                    <div class="header__skillsdropmenu">burger</div>
+                    <button onclick="openMenu()" class="header__burgerbutton">
+                        <span>&#9632;</span>
+                        <span>&#9632;</span>
+                    </button>
+                    <ul class="header__burgermenu">
+                        <li><a class="text--link" href="#hero">Summary</a></li>
+                        <li>
+                            <a class="text--link header__skills" href="#skills">Skills</a>
+                        </li>
+                        <li>
+                            <a class="text--link" href="#">Languages</a>
+                        </li>
+                        <li><a class="text--link" href="#projects">Projects</a></li>
+                        <li><a class="text--link" href="#">Experience</a></li>
+                        <li>
+                            <a class="text--link header__skills" href="#">Education</a>
+                        </li>
+                        <li>
+                            <a class="text--link" href="#">Courses</a>
+                        </li>
+                        <li><a class="text--link" href="#">Contacts</a></li>
+                    </ul>
                 </div>
                 <nav class="header__menu">
                     <ul class="flex--row">
@@ -160,10 +181,30 @@
             </section>
             <section id="projects" class="projects margin--section">
                 <div class="projects__container">
-                    <div class="projects__decor"></div>
-                    <div class="projects__content">
+                    <div class="projects__decorone"></div>
+                    <div class="flex--column  projects__content">
                         <h2 class="text--subtitle projects__title">Projects</h2>
+                        <div class="projects__projects">
+                            <ul class="flex--column">
+                                <li>
+                                    <div class="projects__image">1111111111111111</div>
+                                    <div class="projects__text">1111111111111111</div>
+                                </li>
+                                <li>
+                                    <div class="projects__image">22222222222222222</div>
+                                    <div class="projects__text">22222222222222222</div>
+                                </li>
+                                <li>
+                                    <div class="projects__image">3333333333333333</div>
+                                    <div class="projects__text">3333333333333333</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="projects__link">
+                            <a href="#" class="button--link">View all projects</a>
+                        </div>
                     </div>
+                    <div class="projects__decortwo"></div>
                 </div>
             </section>
         </main>

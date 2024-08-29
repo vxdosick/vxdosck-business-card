@@ -11,3 +11,8 @@ headerSkills.forEach((el) => {
         headerSkillsDropmenu.classList.remove('show');
     });
 });
+
+const headerMenu = document.querySelector('.header__burgermenu');
+function openMenu() {
+    headerMenu.classList.toggle('burger--open');
+}
