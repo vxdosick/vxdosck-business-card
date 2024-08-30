@@ -362,6 +362,48 @@ h1, h2, h3, h4, h5, h6 {
   width: 100px;
   height: 100px;
 }
+.main .skills .skills__container .skills__content .skills__lists .skills__language {
+  grid-column: 1/-1;
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul li {
+  display: flex;
+  align-items: end;
+  gap: 30px;
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul li h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul li .skills__languagesdecor {
+  flex-direction: column-reverse;
+  gap: 5px;
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul li .skills__languagesdecor > div {
+  width: 25px;
+  height: 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul li .skills__languagesdecor > div:nth-child(5) {
+  background-color: rgb(1, 199, 1);
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul li .skills__languagesdecor > div:nth-child(4) {
+  background-color: rgb(176, 228, 115);
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul li .skills__languagesdecor > div:nth-child(3) {
+  background-color: rgb(246, 217, 89);
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul li .skills__languagesdecor > div:nth-child(2) {
+  background-color: rgb(235, 126, 63);
+}
+.main .skills .skills__container .skills__content .skills__lists .skills__language ul li .skills__languagesdecor > div:nth-child(1) {
+  background-color: rgb(230, 54, 54);
+}
 .main .skills .skills__container .skills__content .skills__cv {
   width: 100%;
   display: flex;
