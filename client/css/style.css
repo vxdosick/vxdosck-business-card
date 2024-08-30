@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -393,7 +394,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main .projects .projects__container .projects__content {
   position: relative;
-  max-width: 1200px;
   margin: 0 auto;
   z-index: 1;
 }
@@ -402,23 +402,69 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px;
 }
 .main .projects .projects__container .projects__content .projects__projects {
-  max-width: 1200px;
+  justify-content: space-between;
   margin-bottom: 50px;
 }
 .main .projects .projects__container .projects__content .projects__projects ul {
-  gap: 50px;
+  gap: 100px;
 }
 .main .projects .projects__container .projects__content .projects__projects ul li {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
+}
+.main .projects .projects__container .projects__content .projects__projects ul li:nth-child(2n+1) .projects__text {
+  position: relative;
+}
+.main .projects .projects__container .projects__content .projects__projects ul li:nth-child(2n+1) .projects__text::after {
+  content: "◂";
+  font-size: 90px;
+  color: aquamarine;
+  line-height: 0;
+  position: absolute;
+  top: 47%;
+  left: -39px;
 }
 .main .projects .projects__container .projects__content .projects__projects ul li:nth-child(2n) {
   flex-direction: row-reverse;
 }
+.main .projects .projects__container .projects__content .projects__projects ul li:nth-child(2n) .projects__text {
+  position: relative;
+  border: 1px solid #be15be;
+}
+.main .projects .projects__container .projects__content .projects__projects ul li:nth-child(2n) .projects__text::after {
+  content: "▸";
+  font-size: 90px;
+  color: #be15be;
+  line-height: 0;
+  position: absolute;
+  right: -39px;
+  top: 47%;
+}
 .main .projects .projects__container .projects__content .projects__projects ul li > div {
-  max-width: 49%;
+  max-width: 45%;
+  max-height: 600px;
+}
+.main .projects .projects__container .projects__content .projects__projects ul li .projects__image img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+.main .projects .projects__container .projects__content .projects__projects ul li .projects__text {
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: black;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 5px;
+  border: 1px solid aquamarine;
+}
+.main .projects .projects__container .projects__content .projects__projects ul li .projects__text .projects__gitlink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .main .projects .projects__container .projects__link {
   width: 100%;

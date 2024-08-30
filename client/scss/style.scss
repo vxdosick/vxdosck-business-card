@@ -376,7 +376,7 @@ h1, h2, h3, h4, h5, h6 {
             }
             .projects__content {
                 position: relative;
-                max-width: 1200px;
+                // max-width: 1200px;
                 margin: 0 auto;
                 z-index: 1;
                 .projects__title {
@@ -384,24 +384,71 @@ h1, h2, h3, h4, h5, h6 {
                     margin-bottom: 50px;
                 }
                 .projects__projects {
-                  max-width: 1200px;
+                  justify-content: space-between;
                   margin-bottom: 50px;
                   ul {
-                    gap: 50px;
+                    gap: 100px;
                     li {
                       display: flex;
                       justify-content: space-between;
-                      align-items: center;
+                      align-items: start;
                       flex-wrap: wrap;
+                      &:nth-child(2n + 1) {
+                        .projects__text {
+                          position: relative;
+                          &::after {
+                            content: '\25C2';
+                            font-size: 90px;
+                            color: aquamarine;
+                            line-height: 0;
+                            position: absolute;
+                            top: 47%;
+                            left: -39px;
+                          }
+                        }
+                      }
                       &:nth-child(2n) {
                         flex-direction: row-reverse;
+                        .projects__text {
+                          position: relative;
+                          border: 1px solid #be15be;
+                          &::after {
+                            content: '\25B8';
+                            font-size: 90px;
+                            color: #be15be;
+                            line-height: 0;
+                            position: absolute;
+                            right: -39px;
+                            top: 47%;
+                          }
+                        }
                       }
                       & > div {
-                        max-width: 49%;
+                        max-width: 45%;
+                        max-height: 600px;
                       }
                       .projects__image {
+                        img {
+                          max-width: 100%;
+                          border-radius: 5px;
+                        }
                       }
                       .projects__text {
+                        margin: 0 auto;
+                        max-width: 400px;
+                        background-color: black;
+                        padding: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        border-radius: 5px;
+                        border: 1px solid aquamarine;
+                        
+                        .projects__gitlink {
+                          width: 100%;
+                          display: flex;
+                          justify-content: center;
+                        }
                       }
                     }
                   }
@@ -411,6 +458,7 @@ h1, h2, h3, h4, h5, h6 {
               width: 100%;
               display: flex;
               justify-content: center;
+              
             }
         }
     }
