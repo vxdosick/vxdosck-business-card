@@ -504,6 +504,46 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
     }
+    .exp {
+      .exp__container {
+        .exp__title {
+          margin-bottom: 50px;
+          text-align: center;
+        }
+        .exp__content {
+          gap: 50px;
+          .exp__work {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 100px;
+            .exp__year {
+              width: 200px;
+              height: 200px;
+              border: 1px solid white;
+              border-radius: 50%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 20px;
+            }
+            .exp__info {
+              padding: 30px;
+              border-radius: 5px;
+              border: 1px solid #be15be;
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+            }
+          }
+          .exp__decor {
+            font-size: 60px;
+            color: aquamarine;
+          }
+        }
+      }
+    }
 }
 .footer {
     .footer__container {
